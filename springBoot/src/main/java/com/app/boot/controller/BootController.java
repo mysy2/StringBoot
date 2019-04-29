@@ -24,24 +24,24 @@ public class BootController {
 	}
 	
 	@RequestMapping("/jsp")
-    public String jsp() throws Exception {
-        return "main";
-    }
+	public String jsp() throws Exception {
+		return "main";
+	}
 	
 	@RequestMapping("/mav")
-    public ModelAndView mav() throws Exception{
-        ModelAndView mav = new ModelAndView("mav");
-        
-        mav.addObject("key", "fruits");
-        
-        List<String> fruitList = new ArrayList<String>();
-        
-        fruitList.add("apple");
-        fruitList.add("orange");
-        fruitList.add("banana");
-         
-        mav.addObject("value", fruitList);
-        
-        return mav;
-    }
+	public ModelAndView mav() throws Exception {
+		ModelAndView mav = new ModelAndView("mav");
+
+		mav.addObject("key", "fruits");
+
+		List<String> fruitList = new ArrayList<String>();
+
+		fruitList.add("apple");
+		fruitList.add("orange");
+		fruitList.add("banana");
+
+		mav.addObject("value", fruitList);
+
+		return mav;
+	}
 }
